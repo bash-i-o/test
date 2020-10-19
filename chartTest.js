@@ -147,7 +147,7 @@ const testCTRData = [
   
   const onMousemove = (event, datum) => {
     const { pageX, pageY } = event;
-    tooltip.style('left', `${pageX}px`);
+    tooltip.style('left', `${x(datum.time) < Math.PI ? pageX - 200 : pageX}px`);
     tooltip.style('top', `${pageY - 60}px`);
   };
   
